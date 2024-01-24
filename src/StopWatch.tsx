@@ -17,9 +17,9 @@ export default function StopWatch({ time, laps }: StopWatchProps) {
     return (
         <div>
             <h2>Stopwatch</h2>
-            <div>{formatTime(time)}</div>
+            <div data-testid="stopwatch-time">{formatTime(time)}</div>
             <h3>Laps</h3>
-            <ul>
+            <ul data-testid="lap-time">
                 {laps.map((lap, index) => (
                     <li key={index}>{formatTime(lap)}</li>
                 ))}
